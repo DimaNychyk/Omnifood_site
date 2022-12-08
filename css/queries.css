@@ -210,6 +210,9 @@
   }
 
   .nav-open .main-nav {
+    height: 100vh;
+    position: fixed;
+    /* max-height: 100%; */
     opacity: 1;
     pointer-events: auto;
     visibility: visible;

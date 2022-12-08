@@ -69,7 +69,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   /* Doesn't work on apple */
   scroll-behavior: smooth;
@@ -82,7 +82,10 @@ body {
   color: #555;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
-  overflow-x: hidden;
+}
+
+.scroll-toggle {
+  overflow: hidden;
 }
 
 /**************************/

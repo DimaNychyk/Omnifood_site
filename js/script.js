@@ -5,17 +5,29 @@ yearEl.textContent = currentYear;
 
 // Make mobile navigation work
 
-const btnNavOp = document.querySelector("#open-nav");
-const btnNavCl = document.querySelector("#close-nav");
+const menuBtn = document.getElementById("menu-btn");
 const headerEl = document.querySelector(".header");
+const body = document.querySelector("body");
+const navLinks = document.querySelectorAll(".main-nav-link");
 
-btnNavOp.addEventListener("click", function () {
-  headerEl.classList.add("nav-open");
-});
+const clickBtnHandler = () => {
+  headerEl.classList.toggle("nav-open");
+  menuBtn.classList.toggle("nav-open");
+  body.classList.toggle("scroll-toggle");
+};
 
-btnNavCl.addEventListener("click", function () {
-  headerEl.classList.remove("nav-open");
+menuBtn.addEventListener("click", clickBtnHandler);
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", clickBtnHandler);
 });
+// btnNavOp.addEventListener("click", function () {
+//   headerEl.classList.add("nav-open");
+// });
+
+// btnNavCl.addEventListener("click", function () {
+//   headerEl.classList.remove("nav-open");
+// });
 
 ///////////////////////////////////////////////////////////
 //Smoth animation
